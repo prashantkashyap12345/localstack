@@ -149,7 +149,7 @@ def get_bucket_from_moto(
 ) -> moto_s3_models.FakeBucket:
     # TODO: check authorization for buckets as well?
     try:
-        return moto_backend.get_bucket(bucket_name=bucket)
+        return moto_backend.get_bucket(bucket_name=bucket.lstrip("/"))
     except MissingBucket:
         raise NoSuchBucket("The specified bucket does not exist", BucketName=bucket)
 

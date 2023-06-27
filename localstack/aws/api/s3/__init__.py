@@ -182,9 +182,6 @@ ResourceType = str
 MissingHeaderName = str
 Method = str
 
-def __init__():
-    BucketName = BucketName.split("/")[1] if len(BucketName.split("/")) > 1 else BucketName
-
 
 class AnalyticsS3ExportFileFormat(str):
     CSV = "CSV"
